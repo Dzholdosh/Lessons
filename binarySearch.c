@@ -1,13 +1,17 @@
 #include <stdio.h>
-
-int binarySearch(int[], int, int);
+#include <string.h>
+#define N 6
 
 int main()
 {
-    int myList[] = {1, 3, 5, 7, 9};
-    int len = sizeof(myList) / sizeof(myList[0]);
-
-    printf("%d\n", binarySearch(myList, 3, len));  // 1
-    printf("%d\n", binarySearch(myList, -1, len)); //-1
+    int a[N] = {};
+    for(int i = 0; i < N/2; ++i){
+        a[2*i] = i;
+        a[2*i+1] = N/2+i;
+    }
+    for (int i = 0; i < N; i++){
+        printf("%d", a[i]);
+        printf("\n");
+    }
     return 0;
-}
+} 
